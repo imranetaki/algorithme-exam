@@ -1,0 +1,90 @@
+exercice 1 :
+Algorithme bissextile
+Fonction est_bissextile(annee)
+    Si (annee mod 4 = 0 et annee mod 100 ≠ 0) ou (annee mod 400 = 0) Alors
+        Retourner Vrai
+    Sinon
+        Retourner Faux
+    Fin Si
+
+Fonction annees_bissextiles(siecle)
+variable :
+debut,fin: entier
+    Debut
+        debut ← (siecle * 1) * 100 
+        fin ← (siecle - 1)*100
+        Pour annee <-- debut à fin pas 1  Faire
+            Si est_bissextile(annee)=vrai Alors
+                ecrire(annee)
+            Fin Si
+        Fin Pour
+    Fin
+
+
+exercice 2 :
+
+Algorithme  matrice
+Variables
+    j,i,N, P, c: entier
+    matrice: tableau[N, P]
+
+Début
+    c <-- 1
+    Pour i <-- 1 à N   pas 1 faire
+        Pour j <-- 1 à P  pas de 1 faire
+            matrice[i, j] <-- c
+            c <-- c + 1
+        fin Pour
+    fin Pour
+
+    Pour i <-- 1 à N pas  1 faire
+        Pour j <-- 1 à P pas  1 faire
+            Écrire(matrice[i, j] + " ")
+        fin Pour
+
+    fin Pour
+
+
+    Pour i <-- 1 à N pas 1 faire
+        Si i mod 2 = 0 alors
+            Pour j <-- P à 1 pas  -1 faire
+                Écrire(matrice[i, j] + " ")
+            fin Pour
+        Sinon
+            Pour j <-- 1 à P pas  1 faire
+                Écrire(matrice[i, j] + " ")
+            fin Pour
+        fin Si
+        Écrire(fin de ligne)
+    fin Pour
+Fin
+
+
+exercice 3:
+
+Algorithme somme
+Variables
+    tableau T[]: entiers
+    tableau sous_tab[]: entiers
+    taille,taille1,i,j,s: entier
+
+Début
+    ecrire("entrer la taille du tableau ")
+    lire(taille)
+    redimT(taille)
+    pour i <-- 0 à taille-1 pas 1 faire 
+        ecrire("entrer un element")
+        lire(T[i])
+    finpour 
+    Ecrire(tableau)
+    ecrire("entrer la premiere et la derniere case")
+    lire(x,y)
+    taille1<---y-x+1
+    redimesous_tab(taille1)
+    pour i <---0 à taille1 pas 1 faire 
+         sous_tab[i]<---T[x-1+i]
+         s<--- s+sous_tab[i]
+    finpour
+    Ecrire("La somme maximale est: ", s)
+Fin
+
